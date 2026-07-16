@@ -1,11 +1,200 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>casane by Daisuke Takakura</title>
+
+    <meta
+      name="description"
+      content="Official website of Daisuke Takakura. Website under reconstruction."
+    />
+
+    <link rel="stylesheet" href="https://use.typekit.net/ydk6kqa.css" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <img
+          class="logo"
+          src="/logo/casane_logo-full.svg"
+          alt="casane by Daisuke Takakura"
+        />
+
+        <p>under reconstruction</p>
+      </header>
+
+      <nav class="links" aria-label="External links">
+        <div class="social">
+          <a
+            href="https://www.instagram.com/daisuke_takakura/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram / works
+          </a>
+
+          <a
+            href="https://www.instagram.com/daisuke_takakura_daily/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram / daily
+          </a>
+
+          <a
+            href="https://x.com/schrodinger678"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            X
+          </a>
+        </div>
+
+        <div class="portfolio">
+          <a
+            href="/pdf/portfolio2026.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portfolio
+          </a>
+        </div>
+
+        <div class="contact">
+          <a href="mailto:takakura@casane.jp">
+            takakura@casane.jp
+          </a>
+        </div>
+      </nav>
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    background: #fff;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #fff;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+ .logo {
+  display: block;
+  width: 380px;
+  height: auto;
+}
+
+  p {
+    margin: 1.2rem 0 0;
+    color: #999;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.82rem;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5.6rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .portfolio {
+    margin-top: 3.5rem;
+  }
+
+  .contact {
+    margin-top: 3.5rem;
+  }
+
+  a {
+    color: #111;
+    font-family: "din-condensed", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: opacity 0.25s ease;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+
+  a:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 0.4rem;
+  }
+
+  @media (max-width: 700px) {
+    main {
+      justify-content: flex-start;
+      padding-top: 13svh;
+      padding-bottom: 4rem;
+    }
+
+ @media (max-width: 700px) {
+  .logo {
+    width: min(230px, 82vw);
+  }
+}
+
+    .links {
+      margin-top: 4rem;
+    }
+
+    .portfolio,
+    .contact {
+      margin-top: 3rem;
+    }
+
+    a {
+      font-size: 0.95rem;
+    }
+  }
+</style>
