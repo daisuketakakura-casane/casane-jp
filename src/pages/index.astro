@@ -1,21 +1,10 @@
 ---
-const instagramWorks = "https://www.instagram.com/daisuke_takakura/";
-const instagramDaily =
-  "https://www.instagram.com/daisuke_takakura_daily/";
-const xUrl = "https://x.com/schrodinger678";
-const portfolioUrl = "/pdf/portfolio2026.pdf";
-const email = "takakura@casane.jp";
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>casane by Daisuke Takakura</title>
 
@@ -24,52 +13,36 @@ const email = "takakura@casane.jp";
       content="Official website of Daisuke Takakura. Website under reconstruction."
     />
 
-    <link
-      rel="stylesheet"
-      href="https://use.typekit.net/ydk6kqa.css"
-    />
-
-    <link
-      rel="icon"
-      href="/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="stylesheet" href="https://use.typekit.net/ydk6kqa.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
 
   <body>
     <main>
-      <header class="logo-area">
-        <img
-          class="logo-symbol"
-          src="/logo/casane_logo_only.svg"
-          alt=""
-        />
+      <header>
+        <div class="logo-group">
+          <img
+            class="logo-symbol"
+            src="/logo/casane_logo_only.svg"
+            alt=""
+          />
 
-        <img
-          class="logo-text"
-          src="/logo/casane_logo_text.svg"
-          alt="casane by Daisuke Takakura"
-        />
+          <img
+            class="logo-text"
+            src="/logo/casane_logo_text.svg"
+            alt="casane by Daisuke Takakura"
+          />
+        </div>
 
-        <p class="status">
-          under reconstruction
-        </p>
+        <p>under reconstruction</p>
       </header>
 
-      <div
-        class="separator separator-main"
-        aria-hidden="true"
-      >
-        ∵
-      </div>
+      <div class="main-separator" aria-hidden="true">∵</div>
 
-      <nav
-        class="links"
-        aria-label="External links"
-      >
+      <nav class="links" aria-label="External links">
         <div class="social">
           <a
-            href={instagramWorks}
+            href="https://www.instagram.com/daisuke_takakura/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -77,7 +50,7 @@ const email = "takakura@casane.jp";
           </a>
 
           <a
-            href={instagramDaily}
+            href="https://www.instagram.com/daisuke_takakura_daily/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,7 +58,7 @@ const email = "takakura@casane.jp";
           </a>
 
           <a
-            href={xUrl}
+            href="https://x.com/schrodinger678"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -93,16 +66,11 @@ const email = "takakura@casane.jp";
           </a>
         </div>
 
-        <div
-          class="separator"
-          aria-hidden="true"
-        >
-          ・
-        </div>
+        <div class="separator" aria-hidden="true">・</div>
 
         <div class="portfolio">
           <a
-            href={portfolioUrl}
+            href="/pdf/portfolio2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -110,16 +78,11 @@ const email = "takakura@casane.jp";
           </a>
         </div>
 
-        <div
-          class="separator"
-          aria-hidden="true"
-        >
-          ・
-        </div>
+        <div class="separator" aria-hidden="true">・</div>
 
         <div class="contact">
-          <a href={`mailto:${email}`}>
-            {email}
+          <a href="mailto:takakura@casane.jp">
+            takakura@casane.jp
           </a>
         </div>
       </nav>
@@ -145,44 +108,47 @@ const email = "takakura@casane.jp";
   }
 
   main {
-    display: flex;
     min-height: 100svh;
-    padding: 5rem 2rem;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 5rem 2rem;
     text-align: center;
   }
 
-  .logo-area {
+  header {
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
   .logo-symbol {
     display: block;
-    width: 94px;
+    width: 92px;
     height: auto;
   }
 
   .logo-text {
     display: block;
-    width: 420px;
+    width: 410px;
     max-width: 90vw;
     height: auto;
     margin-top: 1.4rem;
   }
 
-  .status {
-    margin: 3.2rem 0 0;
+  p {
+    margin: 1.2rem 0 0;
     color: #999;
-    font-family:
-      "Helvetica Neue",
-      Helvetica,
-      Arial,
-      sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.82rem;
     font-style: normal;
     font-weight: 300;
@@ -190,41 +156,42 @@ const email = "takakura@casane.jp";
     line-height: 1.5;
   }
 
-  .separator {
-    margin-top: 3rem;
-    color: #111;
-    font-family:
-      "Helvetica Neue",
-      Helvetica,
-      Arial,
-      sans-serif;
+  .main-separator {
+    margin-top: 5.6rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: 300;
     line-height: 1;
-  }
-
-  .separator-main {
-    margin-top: 3.2rem;
-    font-size: 1rem;
   }
 
   .links {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3.5rem;
   }
 
   .social {
     display: flex;
-    margin-top: 3rem;
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
   }
 
-  .portfolio,
+  .separator {
+    margin-top: 3.5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .portfolio {
+    margin-top: 3.5rem;
+  }
+
   .contact {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
   }
 
   a {
@@ -251,10 +218,8 @@ const email = "takakura@casane.jp";
   @media (max-width: 700px) {
     main {
       justify-content: flex-start;
-      padding-top: 13svh;
-      padding-right: 1.5rem;
+      padding-top: 9svh;
       padding-bottom: 4rem;
-      padding-left: 1.5rem;
     }
 
     .logo-symbol {
@@ -264,25 +229,22 @@ const email = "takakura@casane.jp";
     .logo-text {
       width: 290px;
       max-width: 88vw;
+      height: auto;
       margin-top: 1.5rem;
     }
 
-    .status {
-      margin-top: 3rem;
+    .main-separator {
+      margin-top: 4rem;
     }
 
-    .separator-main {
-      margin-top: 3rem;
-    }
-
-    .social {
+    .links {
       margin-top: 3rem;
     }
 
     .separator,
     .portfolio,
     .contact {
-      margin-top: 2.8rem;
+      margin-top: 3rem;
     }
 
     a {
