@@ -1,77 +1,100 @@
 ---
+const instagramWorks = "ここにworksのInstagram URL";
+const instagramDaily = "ここにdailyのInstagram URL";
+const xUrl = "https://x.com/schrodinger678";
+const portfolioUrl = "ここにPortfolio PDFのURL";
+const email = "takakura@casane.jp";
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>casane by Daisuke Takakura</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
     <meta
       name="description"
-      content="Official website of Daisuke Takakura. Website under reconstruction."
+      content="casane by Daisuke Takakura"
     />
 
-    <link rel="stylesheet" href="https://use.typekit.net/ydk6kqa.css" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>casane by Daisuke Takakura</title>
   </head>
 
   <body>
     <main>
-      <header>
+      <header class="logo-area">
         <img
-          class="logo"
-          src="/logo/casane_logo-full.svg"
-          alt="casane by Daisuke Takakura"
+          class="logo-symbol"
+          src="/casane_logo_only.svg"
+          alt=""
         />
 
-        <p>under reconstruction</p>
+        <img
+          class="logo-text"
+          src="/casane_logo_text.svg"
+          alt="casane by Daisuke Takakura"
+        />
       </header>
 
-      <nav class="links" aria-label="External links">
-        <div class="social">
-          <a
-            href="https://www.instagram.com/daisuke_takakura/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram / works
-          </a>
+      <p class="status">under reconstruction</p>
 
-          <a
-            href="https://www.instagram.com/daisuke_takakura_daily/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram / daily
-          </a>
+      <div class="symbol symbol-large" aria-hidden="true">
+        ∵
+      </div>
 
-          <a
-            href="https://x.com/schrodinger678"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            X
-          </a>
-        </div>
+      <nav class="social-links" aria-label="Social media">
+        <a
+          href={instagramWorks}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram / works
+        </a>
 
-        <div class="portfolio">
-          <a
-            href="/pdf/portfolio2026.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Portfolio
-          </a>
-        </div>
+        <a
+          href={instagramDaily}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram / daily
+        </a>
 
-        <div class="contact">
-          <a href="mailto:takakura@casane.jp">
-            takakura@casane.jp
-          </a>
-        </div>
+        <a
+          href={xUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X
+        </a>
       </nav>
+
+      <div class="symbol" aria-hidden="true">
+        ・
+      </div>
+
+      <div class="single-link">
+        <a
+          href={portfolioUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Portfolio
+        </a>
+      </div>
+
+      <div class="symbol" aria-hidden="true">
+        ・
+      </div>
+
+      <div class="single-link">
+        <a href={`mailto:${email}`}>
+          {email}
+        </a>
+      </div>
     </main>
   </body>
 </html>
@@ -82,119 +105,135 @@
   }
 
   :global(html) {
+    margin: 0;
+    padding: 0;
     background: #fff;
   }
 
   :global(body) {
     margin: 0;
+    min-width: 320px;
+    min-height: 100svh;
     background: #fff;
-    color: #111;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color: #000;
+    font-family: "din-condensed", "Arial Narrow", Arial, sans-serif;
+    font-weight: 400;
   }
 
   main {
-    min-height: 100svh;
     display: flex;
+    min-height: 100svh;
+    padding: 4rem 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 2rem;
     text-align: center;
   }
 
-  header {
+  .logo-area {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 
-  .logo {
+  .logo-symbol {
     display: block;
-    width: 380px;
-    max-width: 90vw;
+    width: 92px;
     height: auto;
   }
 
-  p {
-    margin: 1.2rem 0 0;
-    color: #999;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 0.82rem;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
+  .logo-text {
+    display: block;
+    width: 420px;
+    max-width: 85vw;
+    height: auto;
+    margin-top: 1.4rem;
   }
 
-  .links {
+  .status {
+    margin: 3.5rem 0 0;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .symbol {
+    margin-top: 2.8rem;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  .symbol-large {
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+
+  .social-links {
     display: flex;
+    margin-top: 2.8rem;
     flex-direction: column;
     align-items: center;
-    margin-top: 5.6rem;
+    gap: 0.35rem;
   }
 
-  .social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
-  }
-
-  .portfolio {
-    margin-top: 3.5rem;
-  }
-
-  .contact {
-    margin-top: 3.5rem;
+  .single-link {
+    margin-top: 2.8rem;
   }
 
   a {
-    color: #111;
-    font-family: "din-condensed", sans-serif;
+    color: inherit;
     font-size: 1rem;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 0.12em;
-    line-height: 1.4;
+    line-height: 1.25;
     text-decoration: none;
-    transition: opacity 0.25s ease;
   }
 
   a:hover {
-    opacity: 0.6;
+    opacity: 0.55;
   }
 
   a:focus-visible {
     outline: 1px solid currentColor;
-    outline-offset: 0.4rem;
+    outline-offset: 4px;
   }
 
-@media (max-width: 700px) {
-  main {
-    justify-content: flex-start;
-    padding-top: 14svh;
-    padding-bottom: 4rem;
-  }
-}
-
-.logo {
-  width: 92vw;
-  max-width: 330px;
-  height: auto;
-}
-
-    .links {
-      margin-top: 4rem;
+  @media (max-width: 700px) {
+    main {
+      justify-content: flex-start;
+      padding-top: 13svh;
+      padding-right: 1.5rem;
+      padding-bottom: 4rem;
+      padding-left: 1.5rem;
     }
 
-    .portfolio,
-    .contact {
+    .logo-symbol {
+      width: 86px;
+    }
+
+    .logo-text {
+      width: 290px;
+      max-width: 88vw;
+      margin-top: 1.5rem;
+    }
+
+    .status {
+      margin-top: 3.2rem;
+    }
+
+    .symbol-large {
       margin-top: 3rem;
     }
 
-    a {
+    .social-links {
+      margin-top: 2.8rem;
+    }
+
+    .symbol,
+    .single-link {
+      margin-top: 2.7rem;
+    }
+
+    a,
+    .status {
       font-size: 0.95rem;
     }
   }
