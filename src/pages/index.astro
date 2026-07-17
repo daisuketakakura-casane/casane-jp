@@ -65,7 +65,9 @@
             X
           </a>
         </div>
-    
+
+        <div class="separator" aria-hidden="true">・</div>
+
         <div class="portfolio">
           <a
             href="/pdf/portfolio2026.pdf"
@@ -74,27 +76,13 @@
           >
             Portfolio
           </a>
-        <div class="social">
-  ...
-</div>
+        </div>
 
-<div class="separator" aria-hidden="true">・</div>
-
-<div class="portfolio">
-  <a
-    href="/pdf/portfolio2026.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Portfolio
-  </a>
-</div>
-
-<div class="contact">
-  <a href="mailto:takakura@casane.jp">
-    takakura@casane.jp
-  </a>
-</div>
+        <div class="contact">
+          <a href="mailto:takakura@casane.jp">
+            takakura@casane.jp
+          </a>
+        </div>
       </nav>
     </main>
   </body>
@@ -175,30 +163,34 @@
   }
 
   .links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2.2rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.2rem;
+  }
 
-.social {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-}
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
 
-.separator {
-  margin-top: 2.3rem;
-}
+  .separator {
+    margin-top: 2.3rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1;
+  }
 
-.portfolio {
-  margin-top: 1.2rem;
-}
+  .portfolio {
+    margin-top: 1.2rem;
+  }
 
-.contact {
-  margin-top: 2.6rem;
-}
+  .contact {
+    margin-top: 2.6rem;
+  }
 
   a {
     color: #111;
@@ -235,7 +227,6 @@
     .logo-text {
       width: 290px;
       max-width: 88vw;
-      height: auto;
       margin-top: 1.2rem;
     }
 
@@ -244,14 +235,20 @@
     }
 
     .links {
-  margin-top: 2rem;
-}
+      margin-top: 2rem;
+    }
 
-.separator,
-.portfolio,
-.contact {
-  margin-top: 1.9rem;
-}
+    .separator {
+      margin-top: 2rem;
+    }
+
+    .portfolio {
+      margin-top: 1rem;
+    }
+
+    .contact {
+      margin-top: 2.4rem;
+    }
 
     a {
       font-size: 0.95rem;
