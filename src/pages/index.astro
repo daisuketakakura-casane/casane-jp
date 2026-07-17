@@ -79,10 +79,14 @@
   </div>
 
   <div class="contact">
-    <a href="mailto:takakura@casane.jp">
-      takakura@casane.jp
-    </a>
-  </div>
+  <div class="contact-title">CONTACT</div>
+  <a
+    href="mailto:takakura@casane.jp"
+    class="contact-email"
+  >
+    takakura@casane.jp
+  </a>
+</div>
 
   <p class="copyright">
     © 2026 Daisuke Takakura. All rights reserved.
@@ -192,9 +196,29 @@
   margin-top: 1.2rem;
 }
 
-  .contact {
-    margin-top: 5.2rem;
-  }
+.contact {
+  margin-top: 5.2rem;
+}
+
+.contact-title {
+  font-family: "din-condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: #111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  text-decoration: none;
+}
 
   a {
     color: #111;
@@ -208,12 +232,7 @@
     transition: opacity 0.25s ease;
   }
 
-.contact a {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.82rem;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-}
+
 
   a:hover {
     opacity: 0.6;
@@ -276,12 +295,9 @@
   margin-top: 4.5rem;
 }
 
-.contact a {
-  font-size: 0.82rem;
-}
-
 .copyright {
   margin-top: 2.4rem;
   font-size: 0.7rem;
+}
 }
 </style>
